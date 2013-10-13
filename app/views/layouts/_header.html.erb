@@ -3,11 +3,11 @@
         <div class="container">
           <!--This link-to helper has optional third
           argument called hash, in this case adding the CSS id logo to the sample app link -->
-          <%= link_to "sample app", '#', id: "logo" %>
+          <%= link_to "sample app", root_path, id: "logo" %>
           <nav>
             <ul class="nav pull-right">
-              <li><%= link_to "Home", '#' %></li>
-              <li><%= link_to "Help", '#' %></li>
+              <li><%= link_to "Home", root_path %></li>
+              <li><%= link_to "Help", help_path %></li>
               <li><%= link_to "Sign in", '#' %></li>
               </ul>
           </nav>
