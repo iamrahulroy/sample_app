@@ -129,7 +129,7 @@ describe User do
 		let!(:older_micropost) do
 			FactoryGirl.create(:micropost, user: @user, created_at: 1.day.ago)
 		end
-		let!(:newer_micropost)
+		let!(:newer_micropost) do
 			FactoryGirl.create(:micropost, user: @user, created_at: 1.hour.ago)
 		end
 
