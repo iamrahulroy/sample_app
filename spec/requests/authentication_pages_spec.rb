@@ -72,6 +72,18 @@ describe "Authentication" do
             expect(page).to have_title('Edit user')
           end
         end
+
+        describe "in the Relationships controller" do
+          describe "submitting to the create action" do
+            before { post relationships_path }
+            specify { expect(response).to redirect_to(signin_path) }
+          end
+
+          describe "submitting the destroy action" do
+            before { delete relationship_path(1) }
+            specify { expect(response).to redirect_to(signin_path) }
+          end
+        end
       end
 
         describe "in the Microposts controller" do
